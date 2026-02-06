@@ -1,7 +1,7 @@
 import React from 'react';
 import { Book, BookOpen, FileText, Sparkles, Volume2, Moon, Sun } from 'lucide-react';
 
-const Home = ({ darkMode, chapters, onChapterClick }) => {
+const Home = ({ darkMode, chapters, onChapterClick, onJuzClick }) => {
   const totalVerses = chapters.reduce((sum, chapter) => sum + chapter.verses_count, 0);
   const totalSurahs = chapters.length;
   const totalJuz = 30;
@@ -64,7 +64,7 @@ const Home = ({ darkMode, chapters, onChapterClick }) => {
   return (
     <div className="space-y-8">
       {/* Hero Section */}
-      <div className={`relative overflow-hidden rounded-2xl ${darkMode ? 'bg-gradient-to-br from-gray-800 via-gray-800 to-gray-900' : 'bg-gradient-to-br from-white via-emerald-50/30 to-white'} shadow-2xl border ${darkMode ? 'border-gray-700' : 'border-gray-200'}`}>
+      
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-0 left-0 w-96 h-96 bg-emerald-500 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
@@ -82,16 +82,44 @@ const Home = ({ darkMode, chapters, onChapterClick }) => {
             بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
           </h2>
           
-          <h3 className={`text-3xl md:text-4xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+          <h3 className={`text-2xl md:text-4xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
             Selamat Datang di Al-Quran Digital
           </h3>
           
-          <p className={`text-lg md:text-xl max-w-3xl mx-auto leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+          <p className={`text-sm md:text-xl max-w-3xl mx-auto leading-relaxed mb-8 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
             Baca dan dengarkan Al-Quran dengan mudah. Aplikasi ini menyediakan teks Arab, 
             terjemahan Bahasa Indonesia, dan audio murotal berkualitas tinggi.
           </p>
+
+          {/* Tombol Navigasi */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button
+              onClick={onChapterClick}
+              className="group relative overflow-hidden px-8 py-4 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 text-white font-semibold shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-600 to-teal-700 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div className="relative flex items-center justify-center gap-2">
+                <Book className="w-5 h-5" />
+                <span>Mulai Baca Surat</span>
+              </div>
+            </button>
+
+            <button
+              onClick={onJuzClick}
+              className={`group relative overflow-hidden px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 border-2 w-full sm:w-auto ${
+                darkMode 
+                  ? 'bg-gray-800 border-emerald-500 text-white hover:bg-gray-700' 
+                  : 'bg-white border-emerald-500 text-gray-900 hover:bg-gray-50'
+              }`}
+            >
+              <div className="relative flex items-center justify-center gap-2">
+                <BookOpen className="w-5 h-5 text-emerald-600" />
+                <span>Baca per Juz</span>
+              </div>
+            </button>
+          </div>
         </div>
-      </div>
+      
 
       {/* Stats Cards */}
       <div className="grid md:grid-cols-3 gap-6">
