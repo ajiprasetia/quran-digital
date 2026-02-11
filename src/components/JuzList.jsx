@@ -40,9 +40,7 @@ const JuzList = ({ darkMode, juzList, onJuzClick }) => {
   };
 
   return (
-    <div className={`relative overflow-hidden rounded-2xl ${
-      darkMode ? 'bg-gradient-to-br from-gray-800 via-gray-800 to-gray-900 border-gray-700' : 'bg-gradient-to-br from-white via-emerald-50/30 to-white border-gray-200'
-    } border shadow-lg p-8`}>
+    <div className="relative">
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-0 w-64 h-64 bg-emerald-500 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-64 h-64 bg-teal-500 rounded-full blur-3xl"></div>
