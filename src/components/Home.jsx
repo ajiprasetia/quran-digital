@@ -62,9 +62,8 @@ const Home = ({ darkMode, chapters, onChapterClick, onJuzClick }) => {
   };
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
       {/* Hero Section */}
-      
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-0 left-0 w-96 h-96 bg-emerald-500 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
@@ -159,7 +158,7 @@ const Home = ({ darkMode, chapters, onChapterClick, onJuzClick }) => {
       </div>
 
       {/* Features Section */}
-      <div className={`rounded-2xl p-8 ${darkMode ? 'bg-gradient-to-br from-gray-800 via-gray-800 to-gray-900 border-gray-700' : 'bg-gradient-to-br from-white via-emerald-50/30 to-white border-gray-200'} border shadow-lg`}>
+     <div className="space-y-6">
         <div className="flex items-center gap-3 mb-8">
           <div className="p-2 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600">
             <Sparkles className="w-6 h-6 text-white" />
