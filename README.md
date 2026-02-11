@@ -32,9 +32,9 @@ Aplikasi akan berjalan di **http://localhost:5173**
 
 ## 🛠️ Tech Stack
 
-- React 18.2 + Vite 4.4
+- React + Vite 
 - Tailwind CSS 3.3
-- React Router DOM 6.22
+- React Router DOM 
 - Lucide React (Icons)
 - Quran.com API v4
 
@@ -97,4 +97,4 @@ MIT License - Bebas digunakan dan dimodifikasi
 
 ---
 
-**Dibuat dengan ❤️ untuk umat Muslim**
+**Dibuat oleh **Aji Prasetia** untuk umat Muslim**
