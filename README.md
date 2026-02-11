@@ -38,45 +38,6 @@ Aplikasi akan berjalan di **http://localhost:5173**
 - Lucide React (Icons)
 - Quran.com API v4
 
-## 📁 Struktur Project
-
-```
-src/
-├── components/
-│   ├── Navbar.jsx       # Navigation + dark mode toggle
-│   ├── Footer.jsx       # Credit & links
-│   ├── Home.jsx         # Landing page
-│   ├── SurahList.jsx    # Daftar surat + search
-│   ├── SurahDetail.jsx  # Detail surat + audio
-│   ├── JuzList.jsx      # Daftar juz
-│   └── JuzDetail.jsx    # Detail juz + audio
-├── config/
-│   └── api.js           # API configuration
-├── App.jsx              # Routes & state management
-└── main.jsx             # Entry point
-```
-
-## 🌐 Deployment
-
-### Vercel
-```bash
-npm install -g vercel
-vercel
-```
-
-### Netlify
-```bash
-npm run build
-netlify deploy --prod --dir=dist
-```
-
-### GitHub Pages
-```bash
-npm install --save-dev gh-pages
-# Update vite.config.js dengan base: '/quran-digital/'
-npm run deploy
-```
-
 ## 🎨 Kustomisasi
 
 **Ganti Logo:** Letakkan `logo.jpg` di folder `public/`
